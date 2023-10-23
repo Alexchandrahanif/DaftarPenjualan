@@ -21,8 +21,8 @@ class Controller {
       }
 
       if (awal && akhir) {
-        const startDate = moment(awal, "YYYY-MM").startOf("month").format();
-        const endDate = moment(akhir, "YYYY-MM").endOf("month").format();
+        const startDate = moment(awal, "YYYY-MM-DD").startOf("day").format();
+        const endDate = moment(akhir, "YYYY-MM-DD").endOf("day").format();
 
         pagination.where.createdAt = {
           [Op.between]: [startDate, endDate],
